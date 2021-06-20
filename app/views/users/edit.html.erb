@@ -1,0 +1,14 @@
+<% provide(:title, "Edit user") %>
+<% provide(:button_text, 'Save changes') %>
+<h1>Update your profile</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%# When constructing a form using form_with(@user), Rails uses POST if@user.new_record? 
+    is true and PATCH if it is false. %>
+    <%= render 'form' %>
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="https://gravatar.com/emails" target="_blank">change</a>
+    </div>
+  </div>
+</div>
